@@ -3,7 +3,7 @@ import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 
 const INTERVAL = 1000;
-refs.startBtn.addEventListener('click', startCountdown);
+
 let interval = null;
 let selectedDate = Date.now();
 
@@ -34,6 +34,7 @@ const options = {
 };
 
 flatpickr('input#datetime-picker', options);
+refs.startBtn.addEventListener('click', startCountdown);
 
 function startCountdown() {
   refs.startBtn.setAttribute('disabled', '');

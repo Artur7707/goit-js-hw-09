@@ -15,9 +15,9 @@ function getRandomHexColor() {
 }
 
 function changeColor() {
+  refs.startBtn.disabled = true;
   intervalId = setInterval(() => {
     refs.body.style.backgroundColor = getRandomHexColor();
-    refs.startBtn.disabled = true;
   }, DELAY);
 }
 
